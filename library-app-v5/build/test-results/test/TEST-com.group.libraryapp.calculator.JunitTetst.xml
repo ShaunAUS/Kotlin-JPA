@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.group.libraryapp.calculator.JunitTetst" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-12-28T10:24:42" hostname="Minjaeui-MacBookAir.local" time="0.0">
+  <properties/>
+  <testcase name="test()" classname="com.group.libraryapp.calculator.JunitTetst" time="0.0"/>
+  <system-out><![CDATA[테스트 시작전 최초 1회
+각 메서드 실행전
+test1
+각 메서드 실행전
+테스트 시작후 최초 1회
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
