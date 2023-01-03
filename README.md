@@ -1,3 +1,3 @@
-# Kotlin-Springboot-v2
+# Kotlin-JPA
 
 - java -> kotlin  연습
