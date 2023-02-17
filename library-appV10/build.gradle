@@ -1,0 +1,46 @@
+plugins {
+    id 'org.springframework.boot' version '2.6.8'
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+    id 'java'
+    id 'org.jetbrains.kotlin.jvm' version '1.6.21'
+    id 'org.jetbrains.kotlin.plugin.jpa'version'1.6.21'  // JPA entity 기본생성자
+    id 'org.jetbrains.kotlin.plugin.spring'version'1.6.21' // open 으로 열어줌 // bean 클래스와 메서드 열어줌 publicfh
+    id 'org.jetbrains.kotlin.kapt' version '1.6.21'//querydsl
+}
+
+group = 'com.group'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk8:'
+    implementation 'org.jetbrains.kotlin:kotlin-reflect:1.6.21'  //코틀린 리플렉션
+    implementation 'com.fasterxml.jackson.module:jackson-module-kotlin:2.13.3' // 코틀린 jackson
+    implementation 'com.querydsl:querydsl-jpa:5.0.0'
+    kapt("com.querydsl:querydsl-apt:5.0.0:jpa") //querydsl
+    kapt("org.springframework.boot:spring-boot-configuration-processor") //querydsl
+    runtimeOnly 'com.h2database:h2'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
+compileKotlin {
+    kotlinOptions {
+        jvmTarget = "11"
+    }
+}
+compileTestKotlin {
+    kotlinOptions {
+        jvmTarget = "11"
+    }
+}
+
