@@ -1,3 +1,3 @@
 # Kotlin-JPA
 
-- java -> kotlin  연습
+- 도서관관리 앱 java -> kotlin  연습
